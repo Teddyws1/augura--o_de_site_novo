@@ -54,6 +54,7 @@ h1 {
   background: #333;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(255, 111, 60, 0.5);
+  -webkit-user-select: none;
   user-select: none;
   width: 100%;
   max-width: 320px;
@@ -99,6 +100,7 @@ details[open] {
 summary {
   font-size: 1.25rem;
   font-weight: 600;
+  -webkit-user-select: none;
   user-select: none;
   outline: none;
   list-style: none;
@@ -182,6 +184,28 @@ details .clica-aqui:active {
   }
 }
 
+.aviso {
+  color: #e05e2d;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.video-container {
+  width: 100%; /* ocupa toda a largura disponível */
+  max-width: 640px; /* largura máxima do vídeo */
+  margin: 20px auto; /* centraliza horizontalmente e dá margem superior */
+  border-radius: 16px; /* borda arredondada */
+  overflow: hidden; /* garante que o vídeo respeite a borda arredondada */
+  box-shadow: 0 6px 25px rgba(255, 111, 60, 0.6); /* sombra combinando com tema */
+  text-align: center; /* centraliza conteúdo inline se houver */
+}
+
+.video-container video {
+  width: 100%; /* responsivo */
+  height: auto;
+  display: block;
+  border-radius: 16px;
+}
 
 /* Imagens spoiler */
 .spoiler-images {
@@ -199,8 +223,8 @@ details .clica-aqui:active {
   cursor: pointer;
   height: auto;
   object-fit: cover;
+  -webkit-user-select: none;
   user-select: none;
-  -webkit-user-drag: none;
 }
 .spoiler-images img:hover {
   transform: scale(1.05);
@@ -298,8 +322,8 @@ details .clica-aqui:active {
   max-height: 80vh;
   border-radius: 16px;
   box-shadow: 0 8px 30px rgba(255, 111, 60, 0.9);
+  -webkit-user-select: none;
   user-select: none;
-  -webkit-user-drag: none;
   cursor: grab;
   transition: transform 0.3s ease;
   touch-action: none;
@@ -324,6 +348,7 @@ details .clica-aqui:active {
   transition: background-color 0.3s ease;
   margin-bottom: 10px;
   align-self: flex-end;
+  -webkit-user-select: none;
   user-select: none;
 }
 #image-modal #close-image:hover {
@@ -342,6 +367,7 @@ details .clica-aqui:active {
   padding: 10px 15px;
   border-radius: 50%;
   cursor: pointer;
+  -webkit-user-select: none;
   user-select: none;
   box-shadow: 0 3px 10px #ff6f3caa;
   transition: background-color 0.3s ease;
@@ -410,6 +436,7 @@ footer {
   bottom: 0;
   left: 0;
   box-shadow: 0 -2px 10px rgba(255, 111, 60, 0.5);
+  -webkit-user-select: none;
   user-select: none;
   z-index: 2000;
 }
@@ -439,6 +466,7 @@ footer {
   margin-top: 25px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(255, 111, 60, 0.4);
+  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -468,7 +496,8 @@ footer {
 }
 
 @keyframes pulseLiberado {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 0 15px rgba(255, 111, 60, 0.8);
     transform: scale(1);
   }
@@ -503,7 +532,8 @@ h3.lancamento {
 
 /* Animação de brilho pulsante */
 @keyframes glowPulse {
-  0%, 100% {
+  0%,
+  100% {
     text-shadow: 0 0 10px #d83f3f, 0 0 20px #ff9b59aa;
     transform: scale(1);
   }
