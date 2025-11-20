@@ -1,5 +1,5 @@
       // Countdown script
-      const launchDate = new Date(2025, 10, 29, 17, 0, 0).getTime();
+      const launchDate = new Date(0, 0, 0, 0, 0, 0).getTime();
       const countdownEl = document.getElementById("countdown");
       const modal = document.getElementById("modal-aviso");
       const btnFechar = document.getElementById("btn-fechar");
@@ -327,9 +327,7 @@
 
       //////////////////////////////////////////////
       //sistema de bloqueio de botão nova site
-// === CONFIGURAÇÃO ===
-const dataInauguracao = new Date("2025-11-29T17:00:00");
-const botao = document.getElementById("goto-site");
+
 
 // Verifica se já pode liberar
 function verificarBloqueio() {
@@ -345,16 +343,3 @@ function verificarBloqueio() {
     botao.classList.remove("liberado");
   }
 }
-
-// Executa ao carregar
-verificarBloqueio();
-// Atualiza a cada minuto
-setInterval(verificarBloqueio, 60000);
-
-// Ação ao clicar
-botao.addEventListener("click", () => {
-  if (!botao.disabled) {
-    window.open("https://seudominio.com", "_blank"); // coloque o link real aqui
-  }
-});
-
